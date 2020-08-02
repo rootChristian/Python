@@ -1,9 +1,13 @@
 #coding:utf-8
 
 import http.server
+import sys
+import codecs
+
+sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())  
 
 host = ''
-port = 8000
+port = ****
 
 address = (host, port)
 
