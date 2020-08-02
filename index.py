@@ -3,6 +3,10 @@
 import cgi
 import http.cookies
 import datetime
+import sys
+import codecs
+
+sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 expiration = datetime.datetime.now() + datetime.timedelta(days=365)
 expiration = expiration.strftime("%a, %d-%b-%Y %H:%M:%S")
